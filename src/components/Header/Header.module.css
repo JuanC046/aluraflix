@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: var(--color-black);
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
