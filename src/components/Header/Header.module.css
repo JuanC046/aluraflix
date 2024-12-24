@@ -3,7 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 32px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 2px solid var(--color-blue);
+    
+}
+.headerHome{
+    background-color: var(--color-dark-gray);
+}
+.headerNew{
     background-color: var(--color-black);
 }
 .nav {

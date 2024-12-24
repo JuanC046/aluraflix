@@ -1,10 +1,11 @@
 import Logo from "../Logo";
 import Button from "../Button";
 import styles from "./Header.module.css";
-const Header = () => {
+import propTypes from "prop-types";
+const Header = ({variant}) => {
     return (
         <header
-            className={styles.header}
+            className={`${styles.header} ${styles[variant]}`}
         >
             <Logo />
             <nav className={styles.nav} >
@@ -13,6 +14,12 @@ const Header = () => {
                 </nav>
         </header>
     );
+};
+Header.propTypes = {
+    variant: propTypes.string,
+};
+Header.defaultProps = {
+    variant: "headerHome",
 };
 
 export default Header;
