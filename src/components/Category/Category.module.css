@@ -1,0 +1,10 @@
+.category {
+    width: fit-content;
+    max-width: 300px;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: var(--color-white);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5rem;
+}

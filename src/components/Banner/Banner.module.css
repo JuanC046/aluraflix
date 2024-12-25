@@ -1,0 +1,31 @@
+.banner {
+    height: 50vh;
+    background: no-repeat center/cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 32px 32px 16px;
+    gap: 16px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    padding: 0 24px;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-top: 16px;
+    margin-bottom: 4px;
+    text-align: left;
+}
+.description {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-white);
+    text-align: left;
+}

@@ -2,7 +2,7 @@ import Logo from "../Logo";
 import Button from "../Button";
 import styles from "./Header.module.css";
 import propTypes from "prop-types";
-const Header = ({variant}) => {
+const Header = ({variant="headerHome"}) => {
     return (
         <header
             className={`${styles.header} ${styles[variant]}`}
@@ -17,9 +17,6 @@ const Header = ({variant}) => {
 };
 Header.propTypes = {
     variant: propTypes.string,
-};
-Header.defaultProps = {
-    variant: "headerHome",
 };
 
 export default Header;
