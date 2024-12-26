@@ -1,3 +1,4 @@
+import{useState} from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Banner from "../../components/Banner";
@@ -5,6 +6,7 @@ import VideoGroup from "../../components/VideoGroup";
 import Modal from "../../components/Modal";
 
 const Home = () => {
+    const [isOpen, setIsOpen] = useState(true);
     return (
         <>
             <Header />
@@ -28,7 +30,10 @@ const Home = () => {
                 )}
             </main>
             <Footer></Footer>
-            <Modal></Modal>
+            <Modal
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            ></Modal>
         </>
     );
 };

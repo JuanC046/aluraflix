@@ -1,5 +1,4 @@
 import Category from "../Category";
-import VideoImage from "../VideoImage";
 import styles from "./Banner.module.css";
 
 const Banner = ({ background, category, title, description, image }) => {
@@ -13,8 +12,12 @@ const Banner = ({ background, category, title, description, image }) => {
                 <h4 className={styles.title}>{title}</h4>
                 <p className={styles.description}>{description}</p>
             </div>
-            <VideoImage image={image} title={title} />
-           
+            <img
+                className={styles.image}
+                src={image}
+                alt={title}
+                style={{ borderColor: "#4369d2" }}
+            />
         </section>
     );
 };
