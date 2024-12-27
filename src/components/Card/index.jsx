@@ -1,6 +1,11 @@
-import styles from "./Card.module.css";
+import { useContext } from "react";
 
-const Card = ({ image, title, color }) => {
+
+import styles from "./Card.module.css";
+import ModalContext from "../../context/ModalContext";
+
+const Card = ({ image, title, video, description, color }) => {
+    const { setIsOpen, setFormData } = useContext(ModalContext);
     return (
         <article className={styles.card} style={{ borderColor: color }}>
             <img className={styles.image} src={image} alt={title} />
@@ -15,7 +20,13 @@ const Card = ({ image, title, color }) => {
                 </button>
                 <button className={styles.button} 
                 onClick={() => {
-                    alert("Editado");
+                    setIsOpen(true);
+                    setFormData({
+                        title,
+                        image,
+                        video,
+                        description,
+                    });
                 }}>
                     <img src="icons/edit.svg" alt="edit" />
                     EDITAR

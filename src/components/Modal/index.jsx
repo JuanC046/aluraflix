@@ -1,15 +1,12 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styles from "./Modal.module.css";
 import Button from "../Button";
 import TextField from "../TextField";
+import ModalContext from "../../context/ModalContext";
 
-const Modal = ({ isOpen = true, onClose }) => {
-    const [formData, setFormData] = useState({
-        title: "",
-        image: "",
-        video: "",
-        description: "",
-    });
+const Modal = () => {
+    const { isOpen, setIsOpen, formData, setFormData } =
+        useContext(ModalContext);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,10 +18,12 @@ const Modal = ({ isOpen = true, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log("Form submitted");
         // Handle form submission logic
     };
 
     const handleClear = () => {
+        console.log("Clearing form");
         setFormData({
             title: "",
             image: "",
@@ -37,7 +36,7 @@ const Modal = ({ isOpen = true, onClose }) => {
 
     return (
         <>
-            {/* <div className={styles.overlay} onClick={onClose}></div> */}
+            <div className={styles.overlay}></div>
             <dialog open className={styles.modal}>
                 <form
                     onSubmit={handleSubmit}
@@ -71,16 +70,21 @@ const Modal = ({ isOpen = true, onClose }) => {
                     />
                     <div className={styles["form-actions"]}>
                         <Button type="submit">Guardar</Button>
-                        <Button type="button" onClick={handleClear}
-                        variant="unselected"
+                        <Button
+                            type="button"
+                            onClick={handleClear}
+                            variant="unselected"
                         >
                             Limpiar
                         </Button>
                     </div>
                     <button
+                    type="button"
                         className={styles.close}
                         formMethod="dialog"
-                        onClick={onClose}
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
                     >
                         <img src="/icons/cross.svg" alt="close" />
                     </button>
