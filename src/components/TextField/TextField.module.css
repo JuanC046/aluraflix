@@ -11,7 +11,7 @@
     color: var(--color-white);
 }
 
-.input-modal {
+.input-edit {
     background-color: transparent;
     width: 100%;
     color: var(--color-gray);
@@ -20,20 +20,20 @@
     border-radius: 4px;
     border: 2px solid var(--color-blue);
 }
-.input-modal:focus {
+.input-edit:focus {
     outline: none;
     border: 3px solid var(--color-light-blue);
 }
-.input-nuevo {
+.input-create {
     background-color: transparent;
     width: 100%;
     color: var(--color-gray);
     font-size: 1.2rem;
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid var(--color-dark-gray);
+    border: 1px solid var(--color-gray);
 }
-.input-nuevo:focus {
+.input-create:focus {
     outline: none;
     border-width: 3px;
 }

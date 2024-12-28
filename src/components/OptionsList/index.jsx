@@ -1,6 +1,7 @@
 import styles from "./OptionsList.module.css";
 import propTypes from "prop-types";
 const OptionsList = ({
+    variant,
     label,
     name,
     value,
@@ -15,12 +16,9 @@ const OptionsList = ({
                 {label}
             </label>
             <select
-                className={
-                    placeholder !== ""
-                        ? styles["select-nuevo"]
-                        : styles["select-modal"]
-                }
+                className={styles[`select-${variant}`]}
                 name={name}
+                title={name}
                 value={value}
                 onChange={onChange}
                 required={required}

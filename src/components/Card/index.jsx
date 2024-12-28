@@ -4,8 +4,8 @@ import { useContext } from "react";
 import styles from "./Card.module.css";
 import ModalContext from "../../context/ModalContext";
 
-const Card = ({ image, title, video, description, color }) => {
-    const { setIsOpen, setFormData } = useContext(ModalContext);
+const Card = ({ title, category, image, video, description, color }) => {
+    const { setIsOpen, setData } = useContext(ModalContext);
     return (
         <article className={styles.card} style={{ borderColor: color }}>
             <img className={styles.image} src={image} alt={title} />
@@ -21,8 +21,9 @@ const Card = ({ image, title, video, description, color }) => {
                 <button className={styles.button} 
                 onClick={() => {
                     setIsOpen(true);
-                    setFormData({
+                    setData({
                         title,
+                        category,
                         image,
                         video,
                         description,

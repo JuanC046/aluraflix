@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import { ModalContext } from '../Contexts';
 
 export const ModalContextProvider = ({ children }) => {
-    const [formData, setFormData] = useState({
+    const [data, setData] = useState({
         title: "",
         category: "",
         image: "",
@@ -16,8 +16,8 @@ export const ModalContextProvider = ({ children }) => {
         <ModalContext.Provider value={{
             isOpen,
             setIsOpen,
-            formData,
-            setFormData
+            data,
+            setData
         }}>
             {children}
         </ModalContext.Provider>

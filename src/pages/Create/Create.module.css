@@ -1,0 +1,13 @@
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 8px;
+    color: var(--color-white);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--color-white);
+}

@@ -3,6 +3,7 @@ import propTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 const TextField = ({
+    variant,
     label,
     type = "text",
     name,
@@ -33,11 +34,9 @@ const TextField = ({
             </label>
             {name.toLowerCase() !== "description" ? (
                 <input
-                    className={`${
-                        placeholder !== ""
-                            ? styles["input-nuevo"]
-                            : styles["input-modal"]
-                    } ${errors[name] && styles["input-error"]}`}
+                    className={`${styles[`input-${variant}`]} ${
+                        errors[name] && styles["input-error"]
+                    }`}
                     type={type}
                     id={name}
                     {...register(name, { ...rules })}
@@ -47,11 +46,8 @@ const TextField = ({
                 />
             ) : (
                 <textarea
-                    className={`${
-                        placeholder !== ""
-                            ? styles["input-nuevo"]
-                            : styles["input-modal"]
-                    } ${errors[name] && styles["input-error"]}`}
+                    className={`${styles[`input-${variant}`]}
+                     ${errors[name] && styles["input-error"]}`}
                     id={name}
                     {...register(name, { ...rules })}
                     value={value}
