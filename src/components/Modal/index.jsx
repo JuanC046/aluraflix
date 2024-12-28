@@ -4,6 +4,7 @@ import Button from "../Button";
 import TextField from "../TextField";
 import ModalContext from "../../context/ModalContext";
 import { useForm } from "react-hook-form";
+import OptionsList from "../OptionsList";
 const Modal = () => {
     const { isOpen, setIsOpen, formData, setFormData } =
         useContext(ModalContext);
@@ -55,6 +56,15 @@ const Modal = () => {
                         rules={{ required: true }}
                         errors={errors}
                         errorMessage="El título es requerido"
+                    />
+                    <OptionsList 
+                        label="Categoria"
+                        name="category"
+                        value={formData.category}
+                        // placeholder="Selecciona una categoría"
+                        onChange={handleChange}
+                        required
+                        options={["programacion", "desarrollo personal", "otro"]}
                     />
                     <TextField
                         label="Imagen"

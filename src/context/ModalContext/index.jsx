@@ -6,6 +6,7 @@ import { ModalContext } from '../Contexts';
 export const ModalContextProvider = ({ children }) => {
     const [formData, setFormData] = useState({
         title: "",
+        category: "",
         image: "",
         video: "",
         description: "",

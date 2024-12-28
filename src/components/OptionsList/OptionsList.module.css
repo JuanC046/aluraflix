@@ -1,0 +1,46 @@
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.label {
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
+.select-modal {
+    background-color: transparent;
+    width: 100%;
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid var(--color-blue);
+}
+.select-modal option {
+    background-color: var(--color-dark-blue);
+    color: var(--color-gray);
+}
+.select-modal:focus {
+    outline: none;
+    border: 3px solid var(--color-light-blue);
+}
+.select-nuevo {
+    background-color: transparent;
+    width: 100%;
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--color-dark-gray);
+}
+.select-nuevo option {
+    background-color: var(--color-dark-blue);
+    color: var(--color-gray);
+}
+.select-nuevo:focus {
+    outline: none;
+    border-width: 3px;
+}
+
