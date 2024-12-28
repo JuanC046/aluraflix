@@ -4,14 +4,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-  }
-  
-  .form-group label {
+}
+
+.label {
     font-size: 1.2rem;
     color: var(--color-white);
-  }
-  
-  .input-modal {
+}
+
+.input-modal {
     background-color: transparent;
     width: 100%;
     color: var(--color-gray);
@@ -19,12 +19,12 @@
     padding: 8px;
     border-radius: 4px;
     border: 2px solid var(--color-blue);
-  }
-  .input-modal:focus {
+}
+.input-modal:focus {
     outline: none;
     border: 3px solid var(--color-light-blue);
-  }
-  .input-nuevo {
+}
+.input-nuevo {
     background-color: transparent;
     width: 100%;
     color: var(--color-gray);
@@ -32,8 +32,21 @@
     padding: 8px;
     border-radius: 4px;
     border: 1px solid var(--color-dark-gray);
-  }
-    .input-nuevo:focus {
-        outline: none;
-        border-width: 3px;
-    }
+}
+.input-nuevo:focus {
+    outline: none;
+    border-width: 3px;
+}
+
+.label-error {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.input-error::placeholder {
+    color: red;
+}

@@ -1,5 +1,7 @@
 import styles from "./TextField.module.css";
 import propTypes from "prop-types";
+import { useEffect, useState } from "react";
+
 const TextField = ({
     label,
     type = "text",
@@ -7,48 +9,73 @@ const TextField = ({
     value,
     placeholder = "",
     onChange,
+    register,
+    rules,
+    errors,
+    errorMessage,
 }) => {
+    const [message, setMessage] = useState(placeholder);
+    useEffect(() => {
+        console.log("in useEffect", errors[name]);
+        if (errors[name]) {
+            setMessage(errorMessage);
+        } else {
+            setMessage(placeholder);
+        }
+    }, [errors[name]]);
     return (
         <div className={styles["form-group"]}>
-            <label htmlFor={name}>{label}</label>
+            <label
+                htmlFor={name}
+                className={errors[name] ? styles["label-error"] : styles.label}
+            >
+                {label}
+            </label>
             {name.toLowerCase() !== "description" ? (
                 <input
-                    className={
+                    className={`${
                         placeholder !== ""
                             ? styles["input-nuevo"]
                             : styles["input-modal"]
-                    }
+                    } ${errors[name] && styles["input-error"]}`}
                     type={type}
                     id={name}
-                    name={name}
+                    {...register(name, { ...rules })}
                     value={value}
-                    placeholder={placeholder}
+                    placeholder={message}
                     onChange={onChange}
                 />
             ) : (
                 <textarea
-                    className={
+                    className={`${
                         placeholder !== ""
                             ? styles["input-nuevo"]
                             : styles["input-modal"]
-                    }
+                    } ${errors[name] && styles["input-error"]}`}
                     id={name}
-                    name={name}
+                    {...register(name, { ...rules })}
                     value={value}
                     onChange={onChange}
                 ></textarea>
             )}
+            {/* {errors[name] && (
+                <span style={{ color: "red" }}>{errorMessage}</span>
+            )} */}
         </div>
     );
 };
 
 TextField.propTypes = {
-  label: propTypes.string.isRequired,
-  type: propTypes.string,
-  name: propTypes.string.isRequired,
-  value: propTypes.string.isRequired,
-  placeholder: propTypes.string,
-  onChange: propTypes.func.isRequired,
-}
+    label: propTypes.string.isRequired,
+    type: propTypes.string,
+    name: propTypes.string.isRequired,
+    value: propTypes.string.isRequired,
+    placeholder: propTypes.string,
+    onChange: propTypes.func.isRequired,
+    register: propTypes.func.isRequired,
+    rules: propTypes.object,
+    errors: propTypes.object,
+    errorMessage: propTypes.string,
+};
 
 export default TextField;

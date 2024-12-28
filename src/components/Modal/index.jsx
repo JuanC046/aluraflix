@@ -3,10 +3,12 @@ import styles from "./Modal.module.css";
 import Button from "../Button";
 import TextField from "../TextField";
 import ModalContext from "../../context/ModalContext";
-
+import { useForm } from "react-hook-form";
 const Modal = () => {
     const { isOpen, setIsOpen, formData, setFormData } =
         useContext(ModalContext);
+
+    const { register, handleSubmit, formState: {errors} } = useForm();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -16,9 +18,9 @@ const Modal = () => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const onSubmit = (data) => {
         console.log("Form submitted");
+        console.log(data);
         // Handle form submission logic
     };
 
@@ -39,7 +41,7 @@ const Modal = () => {
             <div className={styles.overlay}></div>
             <dialog open className={styles.modal}>
                 <form
-                    onSubmit={handleSubmit}
+                    onSubmit={handleSubmit((e) => onSubmit(e))}
                     className={styles.form}
                     method="dialog"
                 >
@@ -49,24 +51,39 @@ const Modal = () => {
                         name="title"
                         value={formData.title}
                         onChange={handleChange}
+                        register={register}
+                        rules={{ required: true }}
+                        errors={errors}
+                        errorMessage="El título es requerido"
                     />
                     <TextField
                         label="Imagen"
                         name="image"
                         value={formData.image}
                         onChange={handleChange}
+                        register={register}
+                        rules={{ required: true }}
+                        errors={errors}
+                        errorMessage="La imagen es requerida"
                     />
                     <TextField
                         label="Video"
                         name="video"
                         value={formData.video}
                         onChange={handleChange}
+                        register={register}
+                        rules={{ required: true }}
+                        errors={errors}
+                        errorMessage="El video es requerido"
                     />
                     <TextField
                         label="Descripción"
                         name="description"
                         value={formData.description}
                         onChange={handleChange}
+                        register={register}
+                        rules={{ required: false }}
+                        errors={errors}
                     />
                     <div className={styles["form-actions"]}>
                         <Button type="submit">Guardar</Button>
@@ -79,7 +96,7 @@ const Modal = () => {
                         </Button>
                     </div>
                     <button
-                    type="button"
+                        type="button"
                         className={styles.close}
                         formMethod="dialog"
                         onClick={() => {
