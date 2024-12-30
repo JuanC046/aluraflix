@@ -5,7 +5,17 @@ import VideoGroup from "../../components/VideoGroup";
 import Modal from "../../components/Modal";
 
 import { ModalContextProvider } from "../../context/ModalContext";
+import { useContext, useState, useEffect } from "react";
+import DataContext from "../../context/DataContext";
+import { getData } from "../../services/requests";
 const Home = () => {
+    const { categories } = useContext(DataContext);
+    const [videos, setVideos] = useState([]);
+    useEffect(() => {
+            getData().then((data) => {
+                setVideos(data);
+            });
+        }, [videos]);
     return (
         <>
             <Header />
@@ -20,18 +30,14 @@ const Home = () => {
                     }
                 ></Banner>
                 <ModalContextProvider>
-                    <Modal
-                    // isOpen={isOpen}
-                    // onClose={() => setIsOpen(false)}
-                    ></Modal>
-                    {["Christmas", "Halloween", "Thanksgiving"].map(
-                        (category, index) => (
-                            <VideoGroup
-                                key={index}
-                                category={category}
-                            ></VideoGroup>
-                        )
-                    )}
+                    <Modal></Modal>
+                    {categories.map((category, index) => (
+                        <VideoGroup
+                            videos={videos.filter(video => video.category === category.name)}
+                            key={index}
+                            category={category}
+                        ></VideoGroup>
+                    ))}
                 </ModalContextProvider>
             </main>
             <Footer></Footer>

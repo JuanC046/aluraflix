@@ -1,30 +1,40 @@
 import Card from "../Card";
 import Category from "../Category";
 import styles from "./VideoGroup.module.css";
-const VideoGroup = ({ videos = [1, 2, 3, 4], category }) => {
+
+import propTypes from "prop-types";
+const VideoGroup = ({ videos, category }) => {
     return (
-        <section className={styles.videoGroup}>
-            <Category category={category} color={"#021012"}></Category>
-            <ul className={styles.list}>
-                {videos.map((video, index) => (
-                    <li key={index}>
-                        <Card
-                            image={
-                                "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            }
-                            title={"Christmas"}
-                            category={"Navidad"}
-                            video={
-                                "https://www.youtube.com/watch?v=6Dh-RL__uN4"
-                            }
-                            description={"Celebra la navidad con nosotros"}
-                            color={"#FF0000"}
-                        ></Card>
-                    </li>
-                ))}
-            </ul>
-        </section>
+        videos.length > 0 && (
+            <section className={styles.videoGroup}>
+                <Category
+                    category={category.name}
+                    color={category.color}
+                ></Category>
+                <ul className={styles.list}>
+                    {videos.map((video, index) => (
+                        <li key={index}>
+                            <Card
+                                // id={video.id}
+                                // image={video.image}
+                                // title={video.title}
+                                // category={video.category}
+                                // video={video.video}
+                                // description={video.description}
+                                {...video}
+                                color={category.color}
+                            ></Card>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        )
     );
+};
+
+VideoGroup.propTypes = {
+    videos: propTypes.array.isRequired,
+    category: propTypes.object.isRequired,
 };
 
 export default VideoGroup;

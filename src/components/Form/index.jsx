@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../Button";
 import TextField from "../TextField";
 import OptionsList from "../OptionsList";
-
+import DataContext from "../../context/DataContext";
 import styles from "./Form.module.css";
-const Form = ({ data, variant }) => {
+const Form = ({ onSubmit, data, variant }) => {
     const [formData, setFormData] = useState(data);
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
+
+    const { categories } = useContext(DataContext);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,15 +23,15 @@ const Form = ({ data, variant }) => {
         });
     };
 
-    const onSubmit = (data) => {
-        console.log("Form submitted");
-        console.log(data);
-        // Handle form submission logic
-    };
+    // const onSubmit = (data) => {
+    //     console.log("Form submitted");
+    //     console.log(data);
+    //     // Handle form submission logic
+    // };
 
     const handleClear = () => {
-        console.log("Clearing form");
         setFormData({
+            id: data.id,
             title: "",
             category: "",
             image: "",
@@ -39,9 +41,10 @@ const Form = ({ data, variant }) => {
     };
     return (
         <form
-            onSubmit={handleSubmit((e) => onSubmit(e))}
+            onSubmit={handleSubmit(onSubmit)}
             className={styles[`form-${variant}`]}
         >
+            <input {...register("id")} type="hidden" value={formData.id} />
             <TextField
                 variant={variant}
                 label="Título"
@@ -60,7 +63,7 @@ const Form = ({ data, variant }) => {
                 value={formData.category}
                 placeholder="Selecciona una categoría"
                 onChange={handleChange}
-                options={["programacion", "desarrollo personal", "otro"]}
+                options={categories}
                 register={register}
                 rules={{ required: true }}
                 errors={errors}
