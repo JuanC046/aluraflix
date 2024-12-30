@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Programación",
+            "color": "#7DDA58"
+        },
+        {
+            "id": 2,
+            "name": "Diseño",
+            "color": "#33FF57"
+        },
+        {
+            "id": 3,
+            "name": "Deportes",
+            "color": "#5733FF"
+        },
+        {
+            "id": 4,
+            "name": "Cocina",
+            "color": "#FF5733"
+        }
+    ]
+}
