@@ -65,9 +65,9 @@ const OptionsList = ({
                             errors[name] && styles["option-error"]
                         }}`}
                         key={index}
-                        value={option}
+                        value={option.name}
                     >
-                        {option}
+                        {option.name}
                     </option>
                 ))}
             </select>
