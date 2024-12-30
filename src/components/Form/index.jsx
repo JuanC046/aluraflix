@@ -58,9 +58,13 @@ const Form = ({ data, variant }) => {
                 label="Categoria"
                 name="category"
                 value={formData.category}
-                // placeholder="Selecciona una categoría"
+                placeholder="Selecciona una categoría"
                 onChange={handleChange}
                 options={["programacion", "desarrollo personal", "otro"]}
+                register={register}
+                rules={{ required: true }}
+                errors={errors}
+                errorMessage="La categoría es requerida"
             />
             <TextField
                 variant={variant}
@@ -95,7 +99,12 @@ const Form = ({ data, variant }) => {
                 errors={errors}
             />
             <div className={styles["form-actions"]}>
-                <Button type="submit" variant={variant} >Guardar</Button>
+                <Button
+                    type="submit"
+                    variant={variant === "edit" ? "selected" : variant}
+                >
+                    Guardar
+                </Button>
                 <Button
                     type="button"
                     onClick={handleClear}
