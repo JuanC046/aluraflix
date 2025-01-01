@@ -1,0 +1,44 @@
+{
+  "videos": [
+    {
+      "id": "2",
+      "title": "Aprende HTML ahora! curso completo GRATIS desde cero",
+      "category": "Programación",
+      "image": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "video": "https://youtu.be/MJkdaVFHrto?si=lvllSjPYF5AMhJpQ",
+      "description": "This is the second video"
+    },
+    {
+      "id": "3",
+      "title": "Como es un entrenamiento (clase) de Crossfit?",
+      "category": "Deportes",
+      "image": "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "video": "https://youtu.be/8cPQpSS8Tt4?si=OoWopaqbK9_8piYv",
+      "description": "El entrenamiento o clase dura 60 minutos y se divide en 4 partes"
+    },
+    {
+      "id": "4",
+      "title": "🔥¿Qué es PYTHON y para qué SIRVE?",
+      "category": "Programación",
+      "image": "https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "video": "https://youtu.be/lc5JJTQa4r8?si=xbUXV-HTwIwgXyut",
+      "description": ""
+    },
+    {
+      "id": "ca80",
+      "title": "Prueba cocina",
+      "category": "Cocina",
+      "image": "https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "video": "https://youtu.be/VThS7E7ueH0?si=oV_BqAODB8vp7Qb0",
+      "description": "a"
+    },
+    {
+      "id": "a107",
+      "title": "✅ Curso Figma desde CERO en 8 minutos ",
+      "category": "Diseño",
+      "image": "https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "video": "https://www.youtube.com/watch?v=7BufKLx9LGs",
+      "description": "C1 Curso de Introducción a Figma"
+    }
+  ]
+}
