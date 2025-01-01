@@ -40,7 +40,7 @@ const Home = () => {
                     ))}
                 </ModalContextProvider>
             </main>
-            <Footer></Footer>
+            <Footer/>
         </>
     );
 };

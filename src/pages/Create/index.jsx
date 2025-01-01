@@ -36,7 +36,7 @@ const Create = () => {
                     variant="create"
                 />
             </main>
-            <Footer></Footer>
+            <Footer/>
         </>
     );
 };
