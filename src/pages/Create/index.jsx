@@ -15,7 +15,7 @@ const Create = () => {
     return (
         <>
             <Header variant="headerCreate" />
-            <main>
+            <main className={styles.main}>
                 <section>
                     <h2 className={styles.title}>NUEVO VIDEO</h2>
                     <h5 className={styles.subtitle}>

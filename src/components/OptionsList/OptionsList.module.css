@@ -68,3 +68,11 @@
     border-color: var(--color-error);
     color: var(--color-error);
 }
+
+@media screen and (max-width: 440px) {
+    .options-list {
+        gap: 8px;
+        width: 100%;
+    }
+    
+}

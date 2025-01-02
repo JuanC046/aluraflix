@@ -26,3 +26,15 @@
 .form-create > * {
     flex: 0 1 48%;
 }
+
+@media screen and (max-width: 440px) {
+    .form-edit {
+        width: 100%;
+    }
+    .form-create {
+        flex-direction: column;
+        padding: 16px;
+        width: 100%;
+    }
+    
+}

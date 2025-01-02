@@ -50,3 +50,11 @@
 .input-error::placeholder {
     color: var(--color-error);
 }
+
+@media screen and (max-width: 440px) {
+    .form-group {
+        gap: 8px;
+        width: 100%;
+    }
+    
+}
