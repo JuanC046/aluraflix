@@ -20,11 +20,12 @@ const Card = ({ id, title, category, image, video, description, color }) => {
         <article className={styles.card} style={{ borderColor: color }}>
             <img className={styles.image} src={image} alt={title} />
             <div className={styles.options} style={{ borderColor: color }}>
-                <button className={styles.button} onClick={handleDelete}>
+                <button type="button" className={styles.button} onClick={handleDelete}>
                     <img src="icons/delete.svg" alt="delete" />
                     BORRAR
                 </button>
                 <button
+                type="button"
                     className={styles.button}
                     onClick={() => {
                         setIsOpen(true);

@@ -1,4 +1,3 @@
-import "./App.css";
 import RouterApp from "./routes";
 import { DataContextProvider } from "./context/DataContext";
 function App() {

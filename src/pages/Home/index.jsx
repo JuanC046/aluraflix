@@ -22,6 +22,7 @@ const Home = () => {
             <main>
                 <Banner
                     background="https://previews.123rf.com/images/zmiter/zmiter1312/zmiter131200199/24334797-vector-comic-cartoon-merry-christmas-greeting-card.jpg"
+                    borderColor="#FF0000"
                     category={"Christmas"}
                     title={"Celebra la navidad"}
                     description={"En esta navidad celebra con nosotros"}
