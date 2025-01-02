@@ -1,10 +1,6 @@
 import { useContext } from "react";
 import styles from "./Modal.module.css";
-import Button from "../Button";
-import TextField from "../TextField";
 import ModalContext from "../../context/ModalContext";
-import { useForm } from "react-hook-form";
-import OptionsList from "../OptionsList";
 import Form from "../Form";
 
 import { putData } from "../../services/requests";

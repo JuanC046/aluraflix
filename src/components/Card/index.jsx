@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { deleteData } from "../../services/requests";
-
+import propTypes from "prop-types";
 import styles from "./Card.module.css";
 import ModalContext from "../../context/ModalContext";
 
@@ -45,5 +45,14 @@ const Card = ({ id, title, category, image, video, description, color }) => {
             </div>
         </article>
     );
+};
+Card.propTypes = {
+    id: propTypes.string.isRequired,
+    title: propTypes.string.isRequired,
+    category: propTypes.string.isRequired,
+    image: propTypes.string.isRequired,
+    video: propTypes.string.isRequired,
+    description: propTypes.string.isRequired,
+    color: propTypes.string.isRequired,
 };
 export default Card;

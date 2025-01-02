@@ -5,6 +5,7 @@ import TextField from "../TextField";
 import OptionsList from "../OptionsList";
 import DataContext from "../../context/DataContext";
 import styles from "./Form.module.css";
+import propTypes from "prop-types";
 const Form = ({ onSubmit, data, variant }) => {
     const [formData, setFormData] = useState(data);
     const {
@@ -22,12 +23,6 @@ const Form = ({ onSubmit, data, variant }) => {
             [name]: value,
         });
     };
-
-    // const onSubmit = (data) => {
-    //     console.log("Form submitted");
-    //     console.log(data);
-    //     // Handle form submission logic
-    // };
 
     const handleClear = () => {
         setFormData({
@@ -120,4 +115,9 @@ const Form = ({ onSubmit, data, variant }) => {
     );
 };
 
+Form.propTypes = {
+    onSubmit: propTypes.func.isRequired,
+    data: propTypes.object.isRequired,
+    variant: propTypes.string.isRequired,
+};
 export default Form;

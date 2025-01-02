@@ -62,6 +62,7 @@ const TextField = ({
 };
 
 TextField.propTypes = {
+    variant: propTypes.string.isRequired,
     label: propTypes.string.isRequired,
     type: propTypes.string,
     name: propTypes.string.isRequired,

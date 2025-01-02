@@ -15,12 +15,6 @@ const VideoGroup = ({ videos, category }) => {
                     {videos.map((video, index) => (
                         <li key={index}>
                             <Card
-                                // id={video.id}
-                                // image={video.image}
-                                // title={video.title}
-                                // category={video.category}
-                                // video={video.video}
-                                // description={video.description}
                                 {...video}
                                 color={category.color}
                             ></Card>
