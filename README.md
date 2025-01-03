@@ -1,8 +1,57 @@
-# React + Vite
+# ALURAFLIX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React project that solves the challenge AluraFlix of the FrontEnd training of the OracleOne program. 
+AluraFlix is your video repository, where you can add videos and classify them into different categories
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/JuanC046/aluraflix.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd aluraflix
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+### Running the JSON Server (Mock Backend)
+
+1. Start the JSON server:
+```bash
+npm run server
+```
+The server will run on `http://localhost:3000`
+
+### Running the Application
+
+1. Start the development server:
+```bash
+npm run dev
+```
+
+2. Open your browser and visit:
+```
+http://localhost:5173
+```
+
+### Building for Production
+
+To create a production build:
+```bash
+npm run build
+```
+
+The built files will be available in the `dist` directory.
+
+
