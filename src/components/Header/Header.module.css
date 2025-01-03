@@ -14,19 +14,44 @@
 }
 .nav {
     display: flex;
+    align-items: center;
     gap: 20px;
+}
+
+.icon {
+    display: none;
+}
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 440px) {
     .header {
         position: fixed;
         bottom: 0;
-        padding: 16px;
+        justify-content: center;
+        padding: 16px 32px;
         width: 100%;
         box-shadow: none;
         border-bottom: none;
         border-top: 2px solid var(--color-blue);
         z-index: 100;
+    }
+    .text-active {
+        color: var(--color-blue);
+    }
+    .text-inactive {
+        display: none;
+    }
+    .icon {
+        display: block;
+    }
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
     
 }

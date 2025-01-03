@@ -106,7 +106,7 @@ const Form = ({ onSubmit, data, variant }) => {
                 <Button
                     type="button"
                     onClick={handleClear}
-                    variant="unselected"
+                    variant="clean"
                 >
                     Limpiar
                 </Button>

@@ -16,7 +16,24 @@ const Header = ({ variant = "headerHome" }) => {
                             variant === "headerHome" ? "selected" : "unselected"
                         }
                     >
-                        HOME
+                        <img
+                            className={styles.icon}
+                            src={
+                                variant === "headerHome"
+                                    ? "/icons/home-active.svg"
+                                    : "/icons/home.svg"
+                            }
+                            alt="home"
+                        />
+                        <span
+                            className={
+                                variant === "headerHome"
+                                    ? styles["text-active"]
+                                    : styles["text-inactive"]
+                            }
+                        >
+                            HOME
+                        </span>
                     </Button>
                 </Link>
                 <Link to={"/create"}>
@@ -27,7 +44,24 @@ const Header = ({ variant = "headerHome" }) => {
                                 : "unselected"
                         }
                     >
-                        NUEVO VIDEO
+                        <img
+                            className={styles.icon}
+                            src={
+                                variant === "headerCreate"
+                                    ? "/icons/new-active.svg"
+                                    : "/icons/new.svg"
+                            }
+                            alt="new video"
+                        />
+                        <span
+                            className={
+                                variant === "headerCreate"
+                                    ? styles["text-active"]
+                                    : styles["text-inactive"]
+                            }
+                        >
+                            NUEVO VIDEO
+                        </span>
                     </Button>
                 </Link>
             </nav>
