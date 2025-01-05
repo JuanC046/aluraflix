@@ -11,6 +11,7 @@
 
 .image {
     height: 250px;
+    width: 100%;
     object-fit: contain;
     border-radius: 5px;
 }
@@ -39,7 +40,9 @@
 .button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-
+.link {
+    text-decoration: none;
+}
 @media screen and (max-width: 440px) {
     .card {
         height: 250px;

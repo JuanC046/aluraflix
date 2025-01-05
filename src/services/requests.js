@@ -52,3 +52,13 @@ export const deleteData = async (id) => {
         console.error("Error deleting data", error);
     }
 };
+
+export const getVideo = async (id) => {
+    try {
+        const response = await fetch(`${url}/${id}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching video", error);
+    }
+};

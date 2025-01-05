@@ -3,7 +3,7 @@ import { deleteData } from "../../services/requests";
 import propTypes from "prop-types";
 import styles from "./Card.module.css";
 import ModalContext from "../../context/ModalContext";
-
+import { Link } from "react-router-dom";
 const Card = ({ id, title, category, image, video, description, color }) => {
     const { setIsOpen, setData } = useContext(ModalContext);
 
@@ -18,14 +18,20 @@ const Card = ({ id, title, category, image, video, description, color }) => {
     };
     return (
         <article className={styles.card} style={{ borderColor: color }}>
-            <img className={styles.image} src={image} alt={title} />
+            <Link className={styles.link} to={`/${id}`}>
+                <img className={styles.image} src={image} alt={title} />
+            </Link>
             <div className={styles.options} style={{ borderColor: color }}>
-                <button type="button" className={styles.button} onClick={handleDelete}>
+                <button
+                    type="button"
+                    className={styles.button}
+                    onClick={handleDelete}
+                >
                     <img src="icons/delete.svg" alt="delete" />
                     BORRAR
                 </button>
                 <button
-                type="button"
+                    type="button"
                     className={styles.button}
                     onClick={() => {
                         setIsOpen(true);
