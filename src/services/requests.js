@@ -1,19 +1,17 @@
-const url = "http://localhost:3000/videos";
-const checkUrl = async () => {
-    try {
-        const response = await fetch(url);
-        console.log("URL checked", response);
-        return response.ok;
-    } catch (error) {
-        console.error("Error checking URL", error);
-        return false;
-    }
-};
+// const url = "http://localhost:3000/videos";
+// const checkUrl = async () => {
+//     try {
+//         const response = await fetch(url);
+//         console.log("URL checked", response);
+//         return response.ok;
+//     } catch (error) {
+//         console.error("Error checking URL", error);
+//         return false;
+//     }
+// };
 export const getData = async () => {
-    const activeUrl = await checkUrl()? url : import.meta.env.VITE_API_URL;
-    console.log("Fetching data from", activeUrl);
     try {
-        const response = await fetch(activeUrl);
+        const response = await fetch(import.meta.env.VITE_API_URL);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -31,7 +29,7 @@ export const postData = async (video) => {
         description: video.description,
     };
     try {
-        const response = await fetch(url, {
+        const response = await fetch(import.meta.env.VITE_API_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +45,7 @@ export const postData = async (video) => {
 export const putData = async (video) => {
     console.log("Putting data", video);
     try {
-        const response = await fetch(`${url}/${video.id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/${video.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -63,7 +61,7 @@ export const putData = async (video) => {
 export const deleteData = async (id) => {
     console.log("Deleting data", id);
     try {
-        const response = await fetch(`${url}/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
             method: "DELETE",
         });
         return response;
@@ -74,7 +72,7 @@ export const deleteData = async (id) => {
 
 export const getVideo = async (id) => {
     try {
-        const response = await fetch(`${url}/${id}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/${id}`);
         const data = await response.json();
         return data;
     } catch (error) {
