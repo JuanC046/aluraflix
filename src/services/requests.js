@@ -11,13 +11,20 @@ export const getData = async () => {
 
 export const postData = async (video) => {
     console.log("Posting data", video);
+    const newVideo = {
+        title: video.title,
+        category: video.category,
+        image: video.image,
+        video: video.video,
+        description: video.description,
+    };
     try {
         const response = await fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(video),
+            body: JSON.stringify(newVideo),
         });
         return response;
     } catch (error) {
@@ -39,7 +46,7 @@ export const putData = async (video) => {
     } catch (error) {
         console.error("Error putting data", error);
     }
-}
+};
 
 export const deleteData = async (id) => {
     console.log("Deleting data", id);
