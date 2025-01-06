@@ -5,7 +5,7 @@
       "title": "Aprende HTML ahora! curso completo GRATIS desde cero",
       "category": "Programación",
       "image": "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "video": "https://youtu.be/MJkdaVFHrto?si=lvllSjPYF5AMhJpQ",
+      "video": "https://www.youtube.com/embed/MJkdaVFHrto?si=jGAXJoBDXfHy_dDL",
       "description": "This is the second video"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Como es un entrenamiento (clase) de Crossfit?",
       "category": "Deportes",
       "image": "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "video": "https://youtu.be/8cPQpSS8Tt4?si=OoWopaqbK9_8piYv",
+      "video": "https://www.youtube.com/embed/8cPQpSS8Tt4?si=77RCps7pUQbZvIkk",
       "description": "El entrenamiento o clase dura 60 minutos y se divide en 4 partes"
     },
     {
@@ -21,7 +21,7 @@
       "title": "🔥¿Qué es PYTHON y para qué SIRVE?",
       "category": "Programación",
       "image": "https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "video": "https://youtu.be/lc5JJTQa4r8?si=xbUXV-HTwIwgXyut",
+      "video": "https://www.youtube.com/embed/lc5JJTQa4r8?si=eQGM7b9GwewTmO92",
       "description": "hhhhh"
     },
     {
@@ -29,7 +29,7 @@
       "title": "Prueba cocina",
       "category": "Cocina",
       "image": "https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "video": "https://youtu.be/VThS7E7ueH0?si=oV_BqAODB8vp7Qb0",
+      "video": "https://www.youtube.com/embed/VThS7E7ueH0?si=ZcGaIEpcfTAlvcTW\"",
       "description": "a"
     },
     {
@@ -37,8 +37,16 @@
       "title": "✅ Curso Figma desde CERO en 8 minutos ",
       "category": "Diseño",
       "image": "https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "video": "https://www.youtube.com/watch?v=7BufKLx9LGs",
+      "video": "https://www.youtube.com/embed/7BufKLx9LGs?si=jyfY1nlwGkZjaUzM",
       "description": "C1 Curso de Introducción a Figma"
+    },
+    {
+      "id": "c7e8",
+      "title": "🥘 Paella de Mariscos Fácil y Deliciosa ¡Descubre el Secreto! 🦐🦑 (Receta Auténtica)",
+      "category": "Cocina",
+      "image": "https://media.istockphoto.com/id/1269367119/photo/preparing-paella-on-the-beach-in-majorca.jpg?s=1024x1024&w=is&k=20&c=CGNENXIGJwN1RfbbHbXEAU4SsSYGBi-17ryHyIpIsdg=",
+      "video": "https://www.youtube.com/embed/rxnd8QHbX70?si=lTg582AwnkvvYFwp",
+      "description": "¿Quieres aprender a preparar una auténtica Paella de Mariscos? En este vídeo, te mostramos cómo hacerlo paso a paso, utilizando nuestra receta exclusiva con Arroz Brillante Sabroz. 🥘\n\nDescubre el secreto de una paella perfecta, llena de sabor y con los mejores ingredientes. Desde el arroz hasta el marisco, te guiaremos en cada paso del proceso. No necesitas ser un chef experto para preparar este plato, nuestra receta es simple y accesible para todos.\n\nAdemás, te daremos tips y trucos para que tu paella tenga ese toque especial que siempre has buscado. ¿Listo para impresionar a tus invitados con una deliciosa Paella de Mariscos?"
     }
   ]
 }
