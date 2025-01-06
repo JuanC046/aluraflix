@@ -1,7 +1,19 @@
 const url = "http://localhost:3000/videos";
-export const getData = async () => {
+const checkUrl = async () => {
     try {
         const response = await fetch(url);
+        console.log("URL checked", response);
+        return response.ok;
+    } catch (error) {
+        console.error("Error checking URL", error);
+        return false;
+    }
+};
+export const getData = async () => {
+    const activeUrl = await checkUrl()? url : import.meta.env.VITE_API_URL;
+    console.log("Fetching data from", activeUrl);
+    try {
+        const response = await fetch(activeUrl);
         const data = await response.json();
         return data;
     } catch (error) {
