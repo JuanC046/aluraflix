@@ -12,6 +12,9 @@
 .headerCreate{
     background-color: var(--color-black);
 }
+.headerPlayer{
+    background-color: var(--color-dark-blue);
+}
 .nav {
     display: flex;
     align-items: center;

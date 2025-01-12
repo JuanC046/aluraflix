@@ -17,7 +17,7 @@ const Player = () => {
     console.log(video);
     return (
         <>
-            <Header variant="" />
+            <Header variant="headerPlayer" />
             <section className={styles.container}>
                 <iframe
                     className={styles.video}
@@ -29,6 +29,8 @@ const Player = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                 ></iframe>
+                <h3 className={styles.title}>{video.title}</h3>
+                <p className={styles.description}>{video.description}</p>
             </section>
             <Footer />
         </>
