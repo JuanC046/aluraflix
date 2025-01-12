@@ -19,7 +19,10 @@ const Card = ({ id, title, category, image, video, description, color }) => {
     return (
         <article className={styles.card} style={{ borderColor: color }}>
             <Link className={styles.link} to={`/${id}`}>
-                <img className={styles.image} src={image} alt={title} />
+                <div className={styles.imageContainer}>
+                    <img className={styles["play-icon"]} src="icons/play-button.png" alt="play" />
+                    <img className={styles.image} src={image} alt={title} />
+                </div>
             </Link>
             <div className={styles.options} style={{ borderColor: color }}>
                 <button

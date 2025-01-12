@@ -8,12 +8,36 @@
     border-radius: 5px;
     border: 2px solid;
 }
-
+.imageContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.play-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.imageContainer:hover .play-icon {
+    display: block;
+    transition: display 1s;
+    z-index: 1;
+}
 .image {
     height: 250px;
     width: 100%;
     object-fit: contain;
-    border-radius: 5px;
+}
+.image:hover {
+    opacity: 0.9;
+    transition: opacity 0.5s;
 }
 
 .options {
@@ -57,5 +81,4 @@
     .button {
         font-size: 0.8rem;
     }
-    
 }
