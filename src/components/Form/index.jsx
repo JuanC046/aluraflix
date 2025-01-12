@@ -99,7 +99,7 @@ const Form = ({ onSubmit, data, variant }) => {
             <div className={styles["form-actions"]}>
                 <Button
                     type="submit"
-                    variant={variant === "edit" ? "selected" : variant}
+                    variant={variant === "edit" ? "save" : variant}
                 >
                     Guardar
                 </Button>

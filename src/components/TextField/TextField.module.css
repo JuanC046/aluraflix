@@ -12,6 +12,7 @@
 }
 
 .input-edit {
+    font-family: var(--font);
     background-color: transparent;
     width: 100%;
     color: var(--color-gray);
@@ -25,6 +26,7 @@
     border: 3px solid var(--color-light-blue);
 }
 .input-create {
+    font-family: var(--font);
     background-color: transparent;
     width: 100%;
     color: var(--color-gray);
@@ -56,5 +58,4 @@
         gap: 8px;
         width: 100%;
     }
-    
 }
