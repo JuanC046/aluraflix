@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import NotFound from "../NotFound";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { getVideo } from "../../services/requests";
+import { getVideo } from "../../services/localStorage";
 const Player = () => {
     const { id } = useParams();
     const [video, setVideo] = useState(null);

@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Form from "../../components/Form";
 
-import { postData } from "../../services/requests";
+import { postData } from "../../services/localStorage";
 const Create = () => {
     const handleSubmit = (data) => {
         postData(data).then((response) => {

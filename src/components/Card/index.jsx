@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { deleteData } from "../../services/requests";
+import { deleteData } from "../../services/localStorage";
 import propTypes from "prop-types";
 import styles from "./Card.module.css";
 import ModalContext from "../../context/ModalContext";

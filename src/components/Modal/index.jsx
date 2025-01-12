@@ -3,7 +3,7 @@ import styles from "./Modal.module.css";
 import ModalContext from "../../context/ModalContext";
 import Form from "../Form";
 
-import { putData } from "../../services/requests";
+import { putData } from "../../services/localStorage";
 const Modal = () => {
     const { isOpen, setIsOpen, data } = useContext(ModalContext);
 
