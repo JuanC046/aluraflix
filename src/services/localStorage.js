@@ -23,9 +23,7 @@ export const postData = async (video) => {
     console.log("Posting data", video);
     try {
         const data = getLocalStorageData();
-        data.push({ ...video, id: uuid(),
-            video: urlVideoHandle(video.video)
-         });
+        data.push({ ...video, id: uuid(), video: urlVideoHandle(video.video) });
         setLocalStorageData(data);
         return video;
     } catch (error) {
@@ -39,7 +37,10 @@ export const putData = async (video) => {
         const data = getLocalStorageData();
         const index = data.findIndex((v) => v.id === video.id);
         if (index !== -1) {
-            data[index] = video;
+            data[index] = {
+                ...video,
+                video: urlVideoHandle(video.video),
+            };
             setLocalStorageData(data);
             return video;
         } else {
@@ -65,8 +66,6 @@ export const deleteData = async (id) => {
 export const getVideo = async (id) => {
     try {
         const data = getLocalStorageData();
-        console.log("IN GET VIDEO: Id", id);
-        console.log("Data", data);
         const video = data.find((video) => video.id === id);
         return video;
     } catch (error) {

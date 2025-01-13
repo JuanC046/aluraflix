@@ -18,9 +18,7 @@ const OptionsList = ({
 }) => {
     const [message, setMessage] = useState(placeholder);
     useEffect(() => {
-        console.log("in useEffect of", name, errors[name]);
         if (errors[name]) {
-            console.log("setting error message");
             setMessage(errorMessage);
         } else {
             setMessage(placeholder);

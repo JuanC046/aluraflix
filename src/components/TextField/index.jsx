@@ -17,7 +17,6 @@ const TextField = ({
 }) => {
     const [message, setMessage] = useState(placeholder);
     useEffect(() => {
-        console.log("in useEffect", errors[name]);
         if (errors[name]) {
             setMessage(errorMessage);
         } else {

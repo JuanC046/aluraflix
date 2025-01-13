@@ -14,7 +14,6 @@ const Player = () => {
         getVideo(id).then((data) => setVideo(data));
     }, [id]);
     if (!video) return <NotFound />;
-    console.log(video);
     return (
         <>
             <Header variant="headerPlayer" />
@@ -23,14 +22,15 @@ const Player = () => {
                     className={styles.video}
                     width="100%"
                     height="100%"
-    
                     src={video.video}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                 ></iframe>
-                <h3 className={styles.title}>{video.title}</h3>
-                <p className={styles.description}>{video.description}</p>
+                <div className={styles.info}>
+                    <h3 className={styles.title}>{video.title}</h3>
+                    <p className={styles.description}>{video.description}</p>
+                </div>
             </section>
             <Footer />
         </>
