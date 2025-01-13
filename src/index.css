@@ -8,6 +8,7 @@
   --color-white: #ffffff;
   --color-gray: #A5A5A5;
   --color-error: #E53935;
+  --color-shadow:rgba(0, 0, 0, 0.5);
 }
 * {
   margin: 0;

@@ -20,7 +20,12 @@ const Card = ({ id, title, category, image, video, description, color }) => {
         <article className={styles.card} style={{ borderColor: color }}>
             <Link className={styles.link} to={`/${id}`}>
                 <div className={styles.imageContainer}>
-                    <img className={styles["play-icon"]} src="icons/play-button.png" alt="play" />
+                    <h4 className={styles["video-title"]}>{title}</h4>
+                    <img
+                        className={styles["play-icon"]}
+                        src="icons/play-button.png"
+                        alt="play"
+                    />
                     <img className={styles.image} src={image} alt={title} />
                 </div>
             </Link>
