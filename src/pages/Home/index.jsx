@@ -34,11 +34,11 @@ const Home = () => {
                 <Banner
                     background="https://media.istockphoto.com/id/2139109900/photo/black-dark-blue-gray-white-abstract-background-gradient-noise-grain-granular-particle-rough.jpg?s=1024x1024&w=is&k=20&c=TaAMaS5rHTf6QLk3AZH8OmwAtandDSn8znc97n28Ceo="
                     borderColor={bannerVideo.borderColor || "#FF0000"}
-                    category={bannerVideo.category || "Christmas"}
-                    title={bannerVideo.title || "Celebra la navidad"}
+                    category={bannerVideo.category || "Ejemplo"}
+                    title={bannerVideo.title || "Ejemplo de video"}
                     description={
                         bannerVideo.description ||
-                        "En esta navidad celebra con nosotros"
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
                     }
                     image={
                         bannerVideo.image ||
