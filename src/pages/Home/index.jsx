@@ -7,16 +7,25 @@ import Modal from "../../components/Modal";
 import { ModalContextProvider } from "../../context/ModalContext";
 import { useContext, useState, useEffect } from "react";
 import DataContext from "../../context/DataContext";
-import { getData } from "../../services/localStorage";
+import {
+    getData,
+    setLocalStorageData,
+    getLocalStorageData,
+} from "../../services/localStorage";
 import NoVideos from "../../components/NoVideos";
+
+import defaultVideos from "../../../db.json";
+
 const Home = () => {
     const { categories } = useContext(DataContext);
     const [videos, setVideos] = useState([]);
     const [bannerVideo, setBannerVideo] = useState({});
 
     useEffect(() => {
+        if (getLocalStorageData().length === 0) {
+            setLocalStorageData(defaultVideos.videos);
+        }
         getData().then((data) => {
-            if (data.length === 0) return;
             setVideos(data);
             setBannerVideo({
                 ...data[0],

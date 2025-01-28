@@ -1,12 +1,12 @@
 import { v4 as uuid } from "uuid";
 const LOCAL_STORAGE_KEY = "videos";
 import { urlVideoHandle } from "./handles";
-const getLocalStorageData = () => {
+export const getLocalStorageData = () => {
     const data = localStorage.getItem(LOCAL_STORAGE_KEY);
     return data ? JSON.parse(data) : [];
 };
 
-const setLocalStorageData = (data) => {
+export const setLocalStorageData = (data) => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
 };
 
